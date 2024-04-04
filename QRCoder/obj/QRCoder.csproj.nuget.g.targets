@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)c1.aspnetcore.mvc\6.0.20233.354\buildTransitive\net8.0\C1.AspNetCore.Mvc.targets" Condition="Exists('$(NuGetPackageRoot)c1.aspnetcore.mvc\6.0.20233.354\buildTransitive\net8.0\C1.AspNetCore.Mvc.targets')" />
+  </ImportGroup>
+</Project>
