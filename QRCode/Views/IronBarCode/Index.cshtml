@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="col-lg-12">
+    <form asp-controller="IronBarCode" asp-action="ReadBarCode" method="post" enctype="multipart/form-data">
+        <input type="file" name="QRCodeImage" id="QRCodeImage" class="form-contro col-lg-6 bg-secondary" />
+
+        <br />
+        <br />
+        <div class="col-lg-6">
+            <input type="submit" value="Read QR/Bar code" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <a href="/IronBarCode/ReadBarCode"> Read Image and show text </a>
+</div>
+
+
+@if (!string.IsNullOrEmpty(ViewBag.BarcodeText))
+{
+    <div class="col-lg-12">
+        After Reading barcode Code we get the value -> @ViewBag.BarcodeText
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.QrcodeText))
+{
+    <div class="col-lg-12">
+        After Reading QR Code we get the value -> @ViewBag.QrcodeText
+    </div>
+}
